@@ -293,9 +293,15 @@ toWrite.Scolarita(22) = 13; % FB 97
 clearvars dL dl_temp dR dr_temp g i j a b p r sL sl_temp sR sr_temp t
 save('mpti_fit_results.mat');
 
-% Wirte xlsx and csv files  
+% Wirte xlsx file  
 fn_xlsx = "mpti_confidence_table.xlsx";  writetable(toWrite,fn_xlsx);
-fn_csv = "mpti_risultati_n" + nPar + ".csv";    writetable(toWrite,fn_csv,'Delimiter',',');
+
+% clear and save 
+clearvars al d dml_temp dmr_temp doa dsl_temp dmr_temp dTot fn_xlsx gAll ...
+          gm gs par_temp rAll rm rs s sml_temp smr_temp soa ssl_temp ssr_temp sTot sumM sumS sumT vl
+      
+save('confidence_fitting_files.mat');
+save('confidence_table','toWrite');
 
 
 
