@@ -116,11 +116,11 @@ for k = 1:15
     r_same(8,k) = r_same(2,k) / (r_same(2,k) + r_same(4,k)); 
     
     % diff position
-    eval(['r_diff(1,k) = sum(t' num2str(k) '(:) == 5);']); 
-    eval(['r_diff(2,k) = sum(t' num2str(k) '(:) == 4);']);
-    eval(['r_diff(3,k) = sum(t' num2str(k) '(:) == 3);']);
-    eval(['r_diff(4,k) = sum(t' num2str(k) '(:) == 2);']);
-    eval(['r_diff(5,k) = sum(t' num2str(k) '(:) == 1);']);
+    eval(['r_diff(1,k) = sum(t' num2str(k+15) '(:) == 5);']); 
+    eval(['r_diff(2,k) = sum(t' num2str(k+15) '(:) == 4);']);
+    eval(['r_diff(3,k) = sum(t' num2str(k+15) '(:) == 3);']);
+    eval(['r_diff(4,k) = sum(t' num2str(k+15) '(:) == 2);']);
+    eval(['r_diff(5,k) = sum(t' num2str(k+15) '(:) == 1);']);
     r_diff(6,k) = r_diff(1,k) + r_diff(2,k) + r_diff(4,k) + r_diff(5,k);
     r_diff(7,k) = r_diff(1,k) / (r_diff(1,k) + r_diff(5,k));
     r_diff(8,k) = r_diff(2,k) / (r_diff(2,k) + r_diff(4,k));
